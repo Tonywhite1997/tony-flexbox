@@ -1,0 +1,193 @@
+:root{
+    --main-header-color: rgb(50, 104, 168);
+    --main-herosection-color: rgb(71, 91, 191);
+    --main-propertysection-color: rgb(34, 92, 168);
+    --main-textcolor: rgb(108, 161, 230);
+    --main-boximage: rgb(133, 128, 224);
+}
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.body-container{
+    /* border: 5px solid black; */
+    min-height: 100vh;
+    overflow: hidden;
+}
+.container{
+    /* border: 2px solid pink; */
+    height: 10vh;
+    background: var(--main-header-color);
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.logo{
+    font-size: 2rem;
+    margin: 10px;
+}
+.navbar_content{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    margin: 10px;
+}
+.list-item{
+    text-decoration: none;
+    color: white;
+}
+.list-item:hover{
+    color: var(--main-textcolor);
+    transition: all .5s ease-in-out;
+}
+.heroimage{
+    height: 300px;
+    width: 400px;
+    color: var(--main-herosection-color);
+    margin-right: 10px;
+}
+.hero_section{
+    display: flex;
+    background: var(--main-herosection-color);
+    height: 60vh;
+    align-items: center;
+}
+.hero-section{
+    width: 100%;
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.hero-section h1{
+    /* border: 2px solid green; */
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px;
+}
+.hero-section p{
+    width: 70%;
+    /* border: 1px solid firebrick; */
+    margin: 10px;
+}
+.property-section{
+    background: var(--main-propertysection-color);
+    height: 30vh;
+}
+.properties_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+}
+.property-1{
+    /* border: 1px solid white; */
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    background: rgb(133, 128, 224);
+    border-radius: 5px;
+}
+.property-2{
+    background: rgb(133, 128, 224);
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.property-3{
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    background: rgb(133, 128, 224);
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 918px) and (min-width: 589px){
+    .body-container{
+        height: 110vh;
+    }
+    p, h1, li{
+        font-size: 18px;
+    }
+    .property-section{
+        height: 90vh;
+    }
+}
+
+@media screen and (max-width: 588px){
+    .body-container{
+        height: 140vh;
+    }
+    .hero_section{
+        height: 70vh;
+    }
+    .hero-section{
+        flex-direction: column;
+    }
+    .hero-section img{
+        width: 300px;
+        height: 250px;
+        margin-top: 20px;
+        align-items: center;
+    }
+    .hero-section h1{
+        width: 95%;
+        text-align: center;
+    }
+    .hero-section p{
+        /* border: 1px solid red; */
+        width: 90%;
+        margin-right: 5px;
+        text-align: center;
+    }
+    .properties_container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .property-section{
+        height: 90vh;
+    }
+    .property-1{
+        /* border: 1px solid red; */
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 300px) and (min-width: 270px) {
+    .logo{
+        font-size: 20px;
+    }
+    .p, h1, li{
+        font-size: 12px;
+    }
+    .hero-section h1{
+        width: 90%;
+        font-size: 20px;
+        text-align: center;
+    }
+    .hero-section p{
+        width: 90%;
+        font-size: 12px;
+        text-align: center;
+        line-height: 1.2rem;
+    }
+    .hero-section img{
+        width: 200px;
+        height: 200px;
+    }
+    .property-1, .property-2, .property-3{
+        width: 250px;
+        line-height: 1.25rem;
+    }
+    .property-1 h1, .property-2 h1, .property-3 h1{
+        font-size: 20px;
+    }
+}
